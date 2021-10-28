@@ -1,16 +1,23 @@
-package ds.circularLinkedList;
+package ds.graph;
 
 public class App {
-	public static void main(String[] args) {
-		CircularLinkedList list = new CircularLinkedList();
-		list.insertFirst(100);
-		list.insertFirst(90);
-		list.insertFirst(901);
-		list.insertFirst(910);
-		list.insertFirst(9110);
-		list.insertFirst(9044);
-		list.insertLast(11111111);
 
-		list.displayList();
+	public static void main(String[] args) {
+		Graph g = new Graph(5);
+		g.addEdge(0, 1);
+		g.addEdge(0, 2);
+		g.addEdge(0, 3);
+		g.addEdge(1, 2);
+		g.addEdge(1, 4);
+		g.addEdge(2, 3);
+		g.addEdge(3, 1);
+		g.addEdge(4, 0);
+		g.addEdge(4, 3);
+
+		Object[] values = g.adj(2);
+		for (Object val : values) {
+			System.out.println(val);
+		}
 	}
+
 }
