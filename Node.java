@@ -1,11 +1,10 @@
-package doublyLinkedLists;
+package ds.circularLinkedList;
 
 public class Node {
-	public int data;
+	int data;
 	public Node next;
-	public Node previous;
 
 	public void displayNode() {
-		System.out.print("{" + data + "}");
+		System.out.println("{" + data + "}");
 	}
 }
